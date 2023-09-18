@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Todo list
+{% endblock %}
+
+{% block content %}
+    <h1>Todos list <sup><a href="{% url 'todo-new' %}" style="color: lime">Add new todo</a></sup></h1>
+    <table class="table table-hover">
+        <thead class="">
+            <tr>
+                <th col="scope">#</th>
+                <th col="scope">Title</th>
+                <th col="scope">Start</th>
+                <th col="scope">End</th>
+                <th col="scope">Description</th>
+                <th col="scope">User</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for todo in object_list %}
+                <tr>
+                    <th col="scope">{{ forloop.counter }}</th>
+                    <td>{{ todo.title }}</td>
+                    <td>{{ todo.start_time|date:"d.m.y" }}<br>{{ todo.start_time|time:"H:i" }}</td>
+                    <td>{{ todo.end_time|date:"d.m.y" }}<br>{{ todo.end_time|time:"H:i" }}</td>
+                    <td>{{ todo.description }}</td>
+                    <td>{{ todo.user }}</td>
+                </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

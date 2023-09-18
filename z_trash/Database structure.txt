@@ -1,0 +1,13 @@
+Database structure
+Users:
+	- standard auth_users
+
+Todos:
+	id
+	title
+	description
+	start_time
+	end_time
+	date
+	status (not yet, active, haven't done)
+	user_id

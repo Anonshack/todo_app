@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+    Yangiliklaaar
+{% endblock %}
+
+{% block content %}
+    <a href="{% url 'home' %}">Home Page</a>
+        <h1>Yangiliklar</h1>
+        {% for news in object_list %}
+            <h2><a href="{% url 'news_detail' news.id %}"> {{ news.id }}. {{ news.news_title }} <sup style="font-size: 10px">{{ news.news_date }}</sup></a></h2>
+                <h3>{{ news.news_desc }}</h3>
+    {#            <p>{{ news.news_text }}</p>#}
+        {% endfor %}
+{% endblock %}

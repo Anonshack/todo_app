@@ -1,0 +1,9 @@
+To do list for 19.09.2023
+- Breakfast		6:30			
+- Lesson		8:00 - 10:00
+- Relax			10:00 - 10:30
+- Self study		10:30 - 13:00
+- Lunch			13:00 - 13:30
+- Prepare to lesson	13:30 - 14:00
+- Lesson		14:00 - 16:00
+...
